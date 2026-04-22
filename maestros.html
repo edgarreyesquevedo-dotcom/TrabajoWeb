@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asignación Docente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="nav-header">
+        <div class="nav-container">
+            <div class="nav-logo">UAdeO <span>Portal</span></div>
+            <nav class="nav-links">
+                <a href="login.html">Login</a>
+                <a href="maestros.html" class="active-nav">Asignación Maestros</a>
+                <a href="CargaMateriaAlumno.html">Carga Alumnos</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="logo">SISTEMA <span>ESCOLAR</span></div>
+            <ul>
+                <li>Inicio</li>
+                <li class="active"><a href="maestros.html">Asignación Docente</a></li>
+                <li><a href="CargaMateriaAlumno.html">Carga Alumnos</a></li>
+                <li class="logout"><a href="login.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <h1>Asignación de Materias a Docentes</h1>
+            </header>
+            <div class="panel">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Docente</th>
+                            <th>Materia a Asignar</th>
+                            <th>Horario</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ing. Juan Pérez</td>
+                            <td>
+                                <select>
+                                    <option>Estructura de Datos</option>
+                                    <option>Bases de Datos I</option>
+                                </select>
+                            </td>
+                            <td><input type="text" value="07:00 - 09:00"></td>
+                            <td><button class="btn-add">Asignar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
