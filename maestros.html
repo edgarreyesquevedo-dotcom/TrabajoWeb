@@ -2,79 +2,72 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Asignación Docente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de Materias</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="nav-header">
-        <div class="nav-container">
-            <div class="nav-logo">UAdeO <span>Portal</span></div>
-            <nav class="nav-links">
-                <a href="#" onclick="document.getElementById('modalLogin').classList.add('activo'); return false;">Login</a>
-                <a href="maestros.html" class="active-nav">Asignación Maestros</a>
-                <a href="CargaMateriaAlumno.html">Carga Alumnos</a>
-            </nav>
-        </div>
+
+<div class="contenedor">
+
+    <header class="header">
+        <strong><h1>Asignacion de materias</h1></strong>
     </header>
- 
-    <div class="main-container">
-        <nav class="sidebar">
-            <div class="logo">SISTEMA <span>ESCOLAR</span></div>
+
+    <div class="nav-logo">UAdeo <span>Portal</span></div>
+
+    <aside class="barralateral">
+        <nav>
             <ul>
-                <li>Inicio</li>
-                <li class="active"><a href="maestros.html">Asignación Docente</a></li>
-                <li><a href="CargaMateriaAlumno.html">Carga Alumnos</a></li>
-                <li class="logout"><a href="login.html">Cerrar Sesión</a></li>
+                <p>Inicio</p>
+                <a href="maestros.html"><p>Asignacion de Materias</p></a>
+                <p><a href="CargaMateriaAlumno.html">Carga de Materias</a></p>
+                <p><a href="login.html">Cerrar Sesion</a></p>
             </ul>
         </nav>
-        <main class="content">
-            <header>
-                <h1>Asignación de Materias a Docentes</h1>
-            </header>
-            <div class="panel">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Docente</th>
-                            <th>Materia a Asignar</th>
-                            <th>Horario</th>
-                            <th>Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ing. Juan Pérez</td>
-                            <td>
-                                <select>
-                                    <option>Estructura de Datos</option>
-                                    <option>Bases de Datos I</option>
-                                </select>
-                            </td>
-                            <td><input type="text" value="07:00 - 09:00"></td>
-                            <td><button class="btn-add">Asignar</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+    </aside>
+
+    <main class="contenido">
+        <section class="frijolito">
+
+            <!-- Fila 1: datos del alumno (solo lectura) -->
+            <div class="fila-datos">
+
+                <div class="campo">
+                    <p>docente</p>
+                    <input type="text" value="Orlando Medina Guzman" readonly>
+                </div>
+
+                        <div class="fila-datos">
+
+                <div class="campo">
+                    <p>Materia</p>
+                    <select>
+                        <option value="">Seleccione la materia deseada</option>
+                        <option>Bases de Datos</option>
+                        <option>Programación Web</option>
+                    </select>
+                </div>
+
+                                <div class="campo">
+                    <p>Horario</p>
+                    <select>
+                        <option value="">Seleccione un horario</option>
+                        <option>Lun–Mié 07:00–09:00</option>
+                        <option>Lun–Mié 09:00–11:00</option>
+                        <option>Mar–Jue 11:00–13:00</option>
+                        <option>Mar–Jue 13:00–15:00</option>
+                        <option>Vie 07:00–13:00</option>
+                        <option>Vie 13:00–19:00</option>
+                    </select>
+                </div>
+                <button type="submit">Confirmar</button>
+              
+
+            <!-- Fila 2: selección de materia -->
+            
+
+                
+
             </div>
-        </main>
-    </div>
- 
-    <!-- Modal Login -->
-    <div class="modal-overlay" id="modalLogin" onclick="if(event.target===this)this.classList.remove('activo')">
-        <div class="modal-box">
-            <button class="modal-cerrar" onclick="document.getElementById('modalLogin').classList.remove('activo')">✕</button>
-            <div class="logo-area">
-                <div class="logo-circle">C</div>
-                <span class="logo-text">CONALEP</span>
-            </div>
-            <label class="titulo">Inicio de Sesión</label>
-            <p class="subtitulo">Sistema de Gestión Escolar</p>
-            <input type="text" placeholder="Usuario *">
-            <input type="password" placeholder="Contraseña *">
-            <button class="boton" onclick="window.location.href='login.html'">Iniciar Sesión</button>
-            <a href="#">¿Olvidó su contraseña?</a>
-        </div>
-    </div>
- 
-</body>
-</html>

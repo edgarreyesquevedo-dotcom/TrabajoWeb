@@ -15,12 +15,15 @@
         <strong><h1>Carga de Materias</h1></strong>
     </header>
 
+    <div class="nav-logo">UAdeo <span>Portal</span></div>
+
     <aside class="barralateral">
         <nav>
             <ul>
                 <p>Inicio</p>
-                <p>Asignacion de Materias</p>
+                <a href="maestros.html"><p>Asignacion de Materias</p></a>
                 <p>Carga de Materias</p>
+                <p><a href="login.html">Cerrar Sesion</a></p>
             </ul>
         </nav>
     </aside>
@@ -28,22 +31,117 @@
     <main class="contenido">
         <section class="frijolito">
 
-            <div class="campo">
-                <p>Nombre del Alumno</p>
-                <input type="text" id="nombre" name="nombre">
+            <!-- Fila 1: datos del alumno (solo lectura) -->
+            <div class="fila-datos">
+
+                <div class="campo">
+                    <p>Matrícula</p>
+                    <input type="text" value="2021305487" readonly>
+                </div>
+
+                <div class="campo">
+                    <p>Nombre del Alumno</p>
+                    <input type="text" value="García Reyes Luis Fernando" readonly>
+                </div>
+
+                <div class="campo">
+                    <p>Programa Educativo</p>
+                    <input type="text" value="Ing. en Sistemas Computacionales" readonly>
+                </div>
+
+                <div class="campo">
+                    <p>Semestre</p>
+                    <input type="text" value="5° Semestre" readonly>
+                </div>
+
             </div>
 
-            <div class="campo">
-                <p>Semestre</p>
-                <input type="text" id="semestre" name="semestre">
+            <hr class="separador">
+
+            <!-- Fila 2: selección de materia -->
+            <div class="fila-seleccion">
+
+                <div class="campo">
+                    <p>Materia</p>
+                    <select>
+                        <option value="">XD</option>
+                        <option>Bases de Datos</option>
+                        <option>Programación Web</option>
+                        <option>Sistemas Operativos</option>
+                        <option>Redes de Computadoras</option>
+                        <option>Ingeniería de Software</option>
+                        <option>Inteligencia Atificial</optiron>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <p>Horario</p>
+                    <select>
+                        <option value="">:></option>
+                        <option>Lun–Mié 07:00–09:00</option>
+                        <option>Lun–Mié 09:00–11:00</option>
+                        <option>Mar–Jue 11:00–13:00</option>
+                        <option>Mar–Jue 13:00–15:00</option>
+                        <option>Vie 07:00–13:00</option>
+                        <option>Vie 13:00–19:00</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <p>Profesor</p>
+                    <select>
+                        <option value="">D;</option>
+                        <option>Dr. Martínez Solano, Jorge</option>
+                        <option>Mtra. López Fuentes, Ana Patricia</option>
+                        <option>Ing. Hernández Ruiz, Carlos</option>
+                        <option>Dra. Vega Morales, Sandra</option>
+                        <option>Mtro. Pérez Castillo, Roberto</option>
+                    </select>
+                </div>
+
             </div>
 
-            <div class="campo">
-                <p>Materia</p>
-                <input type="text" id="materia" name="materia">
-            </div>
+            <input type="submit" value="Confirmar">
+            <hr class="separador">
 
-            <input type="submit" value="Cargar Materia">
+<h2 class="tabla-titulo">Materias Registradas</h2>
+
+<div class="tabla-wrapper">
+    <table class="tabla-materias">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Materia</th>
+                <th>Profesor</th>
+                <th>Horario</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bases de Datos</td>
+                <td>Dr. Martínez Solano, Jorge</td>
+                <td>Lun–Mié 07:00–09:00</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Programación Web</td>
+                <td>Mtra. López Fuentes, Ana Patricia</td>
+                <td>Mar–Jue 11:00–13:00</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Redes de Computadoras</td>
+                <td>Ing. Hernández Ruiz, Carlos</td>
+                <td>Vie 07:00–13:00</td>
+                <td><button class="btn-eliminar">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
         </section>
     </main>
