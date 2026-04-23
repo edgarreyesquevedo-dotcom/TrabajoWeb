@@ -1,7 +1,7 @@
-/* ===== VARIABLES CONALEP ===== */
+/*  VARIABLES   */
 :root {
-    --verde:        #5BAD6F;
-    --verde-oscuro: #3d8a52;
+    --verde:        #e68f63;
+    --verde-oscuro: #da5b1b;
     --verde-claro:  #e8f5ec;
     --gris-claro:   #f4f4f4;
     --gris-borde:   #ddd;
@@ -10,7 +10,7 @@
     --sombra:       0 4px 16px rgba(0, 0, 0, 0.12);
 }
  
-/* ===== RESET ===== */
+/*  RESET */
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,6 @@ body {
     height: 100vh;
     overflow: hidden;
 }
- 
 /* ===== LAYOUT PRINCIPAL ===== */
 .wrapper {
     display: flex;

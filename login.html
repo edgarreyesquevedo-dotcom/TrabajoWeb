@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - CONALEP</title>
+    <title>Login - UACH</title>
     <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,6 +13,10 @@
         <!-- Panel izquierdo: formulario -->
         <main class="panel-izquierdo">
             <div class="tarjeta">
+
+                <div class="logo-area">
+                    <span class="logo-text">UACH</span>
+                </div>
  
                 <label class="titulo">Inicio de Sesión</label>
                 <p class="subtitulo">Sistema de Gestión Escolar</p>
@@ -23,8 +27,7 @@
                 <button class="boton" onclick="window.location.href='maestros.html'">Iniciar Sesión</button>
  
                 <label><a id="link" href="">¿Olvidó su contraseña?</a></label>
-
-                <label> <a id = "link "href="maestros.html"> Entrar sin cuenta </a></label>
+                
  
             </div>
         </main>
@@ -33,12 +36,9 @@
         <aside class="panel-derecho">
  
             <div class="slideshow">
-                <!-- 
-                    Reemplaza los src con las rutas de tus imágenes reales.
-                    Puedes agregar o quitar slides según necesites.
-                -->
+
                 <div class="slide activo">
-                    <img src="plantel.webp" alt="Campus escolar">
+                    <img src="Campus.jpg" alt="Campus escolar">
                 </div>
                 <div class="slide">
                     <img src="Estudiantes.jpg" alt="Estudiantes">
@@ -49,13 +49,16 @@
                 <div class="slide">
                     <img src="aula.jpg" alt="Aula">
                 </div>
+                <div class="slide">
+                    <img src="Lalo.jpeg" alt="Lalo Y Adal">
+                </div>
             </div>
  
             <div class="overlay"></div>
  
             <div class="panel-texto">
                 <h2>Bienvenido</h2>
-                <p>Colegio Nacional de Educación Profesional Técnica</p>
+                <p>Universidad Autonoma de Chimalhuacan</p>
             </div>
  
             <div class="dots" id="dots"></div>
