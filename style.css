@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-/* Navbar Superior (Navegación de Pantallas) */
+/* Navbar Superior */
 .nav-header {
     width: 100%;
     background-color: #ffffff;
@@ -35,7 +35,7 @@ body {
 }
 
 .nav-logo { font-weight: bold; font-size: 1.3rem; color: #1c252e; }
-.nav-logo span { color: #0056b3; }
+.nav-logo span { color: #5BAD6F; }
 
 .nav-links a {
     text-decoration: none;
@@ -46,14 +46,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.nav-links a:hover { color: #0056b3; }
-.nav-links a.active-nav { color: #0056b3; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }
+.nav-links a:hover { color: #5BAD6F; }
+.nav-links a.active-nav { color: #5BAD6F; border-bottom: 2px solid #5BAD6F; padding-bottom: 5px; }
 
-/* Contenedor de Pantallas (Maestros y Alumnos) */
+/* Contenedor Principal */
 .main-container {
     width: 1280px;
     height: 800px;
-    margin: 85px auto 20px auto; /* Margen para no chocar con la navbar */
+    margin: 85px auto 20px auto;
     display: flex;
     background: white;
     border: 1px solid #ddd;
@@ -62,7 +62,7 @@ body {
     overflow: hidden;
 }
 
-/* Diseño del Login */
+/* Diseño del Login (página login.html) */
 #login-body {
     background: linear-gradient(135deg, #1c252e 0%, #2c3e50 100%);
     display: flex;
@@ -84,7 +84,7 @@ body {
 .login-header h2 { color: #1c252e; margin-bottom: 10px; }
 .login-header p { color: #777; margin-bottom: 30px; font-size: 0.9rem; }
 
-/* Inputs y Botones */
+/* Inputs y Botones generales */
 .input-group { text-align: left; margin-bottom: 20px; }
 .input-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.85rem; }
 input, select {
@@ -99,7 +99,7 @@ input, select {
     display: block;
     width: 100%;
     padding: 14px;
-    background: #0056b3;
+    background: #5BAD6F;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -108,7 +108,7 @@ input, select {
     transition: background 0.3s;
 }
 
-.btn-primary-link:hover { background: #004494; }
+.btn-primary-link:hover { background: #3d8a52; }
 
 /* Sidebar Lateral */
 .sidebar {
@@ -118,10 +118,10 @@ input, select {
     padding: 30px 20px;
 }
 
-.sidebar .logo { font-size: 1.2rem; font-weight: bold; color: #4facfe; margin-bottom: 40px; }
+.sidebar .logo { font-size: 1.2rem; font-weight: bold; color: #5BAD6F; margin-bottom: 40px; }
 .sidebar ul { list-style: none; }
 .sidebar li { padding: 15px; margin-bottom: 8px; border-radius: 8px; cursor: pointer; }
-.sidebar li.active { background-color: #34495e; border-left: 4px solid #4facfe; }
+.sidebar li.active { background-color: #34495e; border-left: 4px solid #5BAD6F; }
 .sidebar li a { color: white; text-decoration: none; display: block; width: 100%; }
 
 /* Contenido Principal */
@@ -140,18 +140,103 @@ input, select {
 .data-table th { text-align: left; background: #f1f4f8; padding: 15px; color: #555; font-size: 0.9rem; }
 .data-table td { padding: 15px; border-bottom: 1px solid #eee; }
 
-.btn-add { background: #28a745; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+.btn-add { background: #5BAD6F; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+.btn-add:hover { background: #3d8a52; }
 .btn-remove { background: #dc3545; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
 
 /* Grid para Carga de Alumnos */
 .grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-.course-item { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 12px; 
-    background: #fbfbfb; 
-    margin-bottom: 10px; 
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #fbfbfb;
+    margin-bottom: 10px;
     border-radius: 6px;
     border: 1px solid #eee;
 }
+
+/* ===== MODAL LOGIN ===== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.activo { display: flex; }
+
+.modal-box {
+    background: white;
+    padding: 36px 30px;
+    border-radius: 16px;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.modal-box .logo-area { display: flex; align-items: center; gap: 10px; }
+
+.modal-box .logo-circle {
+    background: #5BAD6F;
+    color: white;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box .logo-text { font-weight: 700; color: #5BAD6F; letter-spacing: 2px; }
+.modal-box .titulo { font-weight: 700; color: #3d8a52; }
+.modal-box .subtitulo { font-size: 0.75rem; color: #777; }
+
+.modal-box input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.8rem;
+}
+
+.modal-box input:focus { outline: 2px solid #5BAD6F; border-color: #5BAD6F; }
+
+.modal-box .boton {
+    background: #5BAD6F;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 60%;
+    height: 38px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.modal-box .boton:hover { background: #3d8a52; }
+
+.modal-box a { font-size: 0.72rem; color: #777; text-decoration: none; }
+.modal-box a:hover { color: #5BAD6F; }
+
+.modal-cerrar {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #aaa;
+    margin-bottom: -8px;
+}
+
+.modal-cerrar:hover { color: #333; }

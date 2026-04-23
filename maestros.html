@@ -10,13 +10,13 @@
         <div class="nav-container">
             <div class="nav-logo">UAdeO <span>Portal</span></div>
             <nav class="nav-links">
-                <a href="login.html">Login</a>
+                <a href="#" onclick="document.getElementById('modalLogin').classList.add('activo'); return false;">Login</a>
                 <a href="maestros.html" class="active-nav">Asignación Maestros</a>
                 <a href="CargaMateriaAlumno.html">Carga Alumnos</a>
             </nav>
         </div>
     </header>
-
+ 
     <div class="main-container">
         <nav class="sidebar">
             <div class="logo">SISTEMA <span>ESCOLAR</span></div>
@@ -58,5 +58,23 @@
             </div>
         </main>
     </div>
+ 
+    <!-- Modal Login -->
+    <div class="modal-overlay" id="modalLogin" onclick="if(event.target===this)this.classList.remove('activo')">
+        <div class="modal-box">
+            <button class="modal-cerrar" onclick="document.getElementById('modalLogin').classList.remove('activo')">✕</button>
+            <div class="logo-area">
+                <div class="logo-circle">C</div>
+                <span class="logo-text">CONALEP</span>
+            </div>
+            <label class="titulo">Inicio de Sesión</label>
+            <p class="subtitulo">Sistema de Gestión Escolar</p>
+            <input type="text" placeholder="Usuario *">
+            <input type="password" placeholder="Contraseña *">
+            <button class="boton" onclick="window.location.href='login.html'">Iniciar Sesión</button>
+            <a href="#">¿Olvidó su contraseña?</a>
+        </div>
+    </div>
+ 
 </body>
 </html>
